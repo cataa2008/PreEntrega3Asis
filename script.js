@@ -95,14 +95,21 @@ const UICtrl = (function () {
         .insertAdjacentHTML("beforeend", html);
     },
     deleteAmount: function (id) {
+      
       const ids = data.items.map(function (item) {
         return item.id;
       });
       const index = ids.indexOf(id);
+
+      
       if (index !== -1) {
         data.items.splice(index, 1);
       }
+
+     
       this.saveToStorage();
+
+
       const itemToDelete = document.getElementById(id);
       
       location.reload();
@@ -111,7 +118,8 @@ const UICtrl = (function () {
 
     },
     saveToStorage: function() {
-        localStorage.setItem('items', JSON.stringify(data.items));
+        localStorage.setItem('items', JSON.stringify(data.items)); 
+    },
     clearInputs: function () {
       document.querySelector(UISelectors.descriptionInput).value = "";
       document.querySelector(UISelectors.amountInput).value = "";
