@@ -95,21 +95,14 @@ const UICtrl = (function () {
         .insertAdjacentHTML("beforeend", html);
     },
     deleteAmount: function (id) {
-      // Elimina el item del array `data.items`
       const ids = data.items.map(function (item) {
         return item.id;
       });
       const index = ids.indexOf(id);
-
-      // Si se encuentra el item, lo elimina
       if (index !== -1) {
         data.items.splice(index, 1);
       }
-
-      // Guarda los cambios en el localStorage
       this.saveToStorage();
-
-      // También elimina el item visualmente del DOM
       const itemToDelete = document.getElementById(id);
       
       location.reload();
@@ -118,8 +111,7 @@ const UICtrl = (function () {
 
     },
     saveToStorage: function() {
-        localStorage.setItem('items', JSON.stringify(data.items));  // Guarda el array actualizado en el localStorage
-    },
+        localStorage.setItem('items', JSON.stringify(data.items));
     clearInputs: function () {
       document.querySelector(UISelectors.descriptionInput).value = "";
       document.querySelector(UISelectors.amountInput).value = "";
