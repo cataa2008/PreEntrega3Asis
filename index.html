@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+    <title>Pagina de presupuesto</title>
+</head>
+<body>
+    <div class="container">
+        <div class="budget__numbers">
+            <div id="earned" class="number">
+                <small>Plata ganada</small>
+                <div class="amount__container">
+                    <p id="earned__symbol">$</p>
+                    <span id="amount__earned"></span>
+                </div>
+            </div>
+            <div id="available" class="number">
+                <small>Plata disponible</small>
+                <div class="amount__container">
+                    <p>$</p>
+                    <span id="amount__available"></span>
+                </div>
+            </div>
+            <div id="spent" class="number">
+                <small>Plata gastada</small>
+                <div class="amount__container">
+                    <p id="spent__symbol">$</p>
+                    <span id="amount__spent"></span>
+                </div>
+            </div>
+        </div>
+        <div class="input__area">
+            <input type="text" id="description" placeholder="Descripcion">
+            <input type="number" id="amount" placeholder="Cantidad">
+        </div>
+        <div class="buttons__area">
+            <button id="add__income">agregar ingresos</button>
+            <button id="add__expense">agregar gastos</button>
+        </div>
+        <div class="items__container">
+            <div id="income__container" class="container">
+                <h2>ingresos</h2>
+            </div>
+            <div id="expenses__container" class="container">
+                <h2>gastos</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
